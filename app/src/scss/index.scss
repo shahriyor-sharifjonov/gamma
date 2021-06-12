@@ -1,0 +1,362 @@
+@import "layout/root";
+@import "layout/font";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat';
+}
+
+.header{
+  background: url(../images/BG.webp) center / cover;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+
+  &__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include media($xl){
+      margin-bottom: 100px;
+    }
+  }
+
+  &__logo__img{
+
+    @include media($xl){
+      display: none;
+    }
+  }
+
+  &__logo__img__hidden{
+    display: none;
+
+    @include media($xl){
+      display: block;
+    }
+  }
+
+  &__nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+
+    @include media($xl) {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 230px;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(15px);
+      padding: 30px 0;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: 0.5s transform;
+      height: 100%;
+      justify-content: space-between;
+
+      
+      &.open{
+        transform: translateX(0);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+
+    @include media($xl){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 25px;
+    position: relative;
+    font-weight: 500;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    @include media($xl){
+      display: block;
+      margin: 10px 0;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 3px;
+      background: #fff;
+      transition: 0.3s ease;
+
+      @include media($xl){
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &:hover::before{
+      transform: scaleX(1.2);
+    }
+
+    &:hover{
+      color: #ddd;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    display: none;
+    
+    @include media($xl){
+      display: block;
+    }
+    
+    &.open{
+      .header__button-line,
+      &::before{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+      &::after{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-135deg);
+      }
+    }
+
+    &::before,
+    &::after,
+    &-line {
+      transition: 0.5s;
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: white;
+    }
+
+    &::before {
+      top: 20%;
+    }
+
+    &::after {
+      bottom: 20%;
+    }
+
+    &-line {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__phone{
+    display: flex;
+    align-items: center;
+
+    @include media($xl){
+      margin-top: 25px;
+    }
+
+    a{
+      text-decoration: none;
+      color: #fff;
+      margin-left: 10px;
+      transition: 0.3s ease;
+
+      &:hover{
+        color: #ddd;
+      }
+    }
+  }
+
+  &__intro{
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 200px;
+
+      @include media($xl){
+        margin-bottom: 50px;
+      }
+    }
+
+    &__title{
+      color: #fff;
+      margin-bottom: 22px;
+    }
+
+    &__p{
+      color: #fff;
+      margin-bottom: 30px;
+      max-width: 665px;
+    }
+
+    &__btns{
+      display: flex;
+      align-items: center;
+
+      @include media(472){
+        flex-direction: column;
+      }
+    }
+
+    &__btn{
+      border-radius: 8px;
+      padding: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:first-child{
+        background: #fff;
+        color: #000;
+        font-weight: 500;
+        margin-right: 42px;
+        padding: 15px 29px;
+        border: 2px solid #fff;
+
+        @include media(472){
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+
+        &:hover{
+          background: #ddd;
+          border: 2px solid #ddd;
+        }
+      }
+
+      &:last-child{
+        background: #000;
+        color: #fff;
+        font-weight: 500;
+        padding: 15px 50px;
+        border: 2px solid #fff;
+
+        &:hover{
+          background: #222;
+        }
+      }
+    }
+  }
+
+  &__location{
+    display: flex;
+    align-items: center;
+
+    svg{
+      margin-right: 12px;
+    }
+
+    p{
+      color: #fff;
+    }
+  }
+}
+
+.items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-weight: bold;
+    font-size: 40px;
+
+    @include media($lg){
+      text-align: center;
+    }
+  }
+}
+
+.item{
+  padding-bottom: 100px;
+  
+  @include media($lg){
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 16px;
+    max-width: 600px;
+    width: 100%;
+
+    @include media($lg){
+      text-align: center;
+    }
+  }
+
+  &__p{
+    max-width: 500px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include media($lg){
+      text-align: center;
+    }
+  }
+
+  &__texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media($lg){
+      order: 1;
+    }
+  }
+
+
+  &__img{
+    max-width: 450px;
+    width: 100%;
+  }
+
+
+  &_left .item__imgs{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mt-lg-30{
+  @include media($lg){
+    margin-top: 30px;
+  }
+}

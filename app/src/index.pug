@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title GAMMA
+    link(rel="stylesheet", href="styles/animate.css")
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    header.header
+      .header__menu.container
+        a(href="#!").header__logo
+            img(src="images/Logo.webp", alt="GAMMA").header__logo__img__hidden
+        button.header__button 
+          span.header__button-line
+      .header__nav.container
+        a(href="#!").header__logo
+          img(src="images/Logo.webp", alt="GAMMA").header__logo__img
+        ul.header__list 
+          li.header__li
+            a(href="#!").header__link ГЛАВНАЯ
+          li.header__li
+            a(href="#!").header__link УСЛУГИ
+          li.header__li
+            a(href="#!").header__link О НАС
+          li.header__li
+            a(href="#!").header__link ДОСТАВКА
+          li.header__li
+            a(href="#!").header__link КОНТАКТЫ
+        .header__phone
+          svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M23.3468 17.6318L19.9975 14.2944C18.8014 13.1024 16.7679 13.5792 16.2894 15.1287C15.9305 16.2015 14.7344 16.7975 13.6578 16.5591C11.2655 15.9631 8.03583 12.864 7.43775 10.3609C7.0789 9.28809 7.7966 8.09614 8.87315 7.73859C10.4282 7.26181 10.9066 5.23549 9.71047 4.04353L6.3612 0.706054C5.40426 -0.128316 3.96886 -0.128316 3.13155 0.706054L0.858826 2.97077C-1.41389 5.35468 1.09806 11.6721 6.72005 17.2742C12.342 22.8764 18.6817 25.4988 21.0741 23.1148L23.3468 20.8501C24.1842 19.8965 24.1842 18.4662 23.3468 17.6318Z" fill="white")
+          a(href="tel:+375333543540") +37533 354-35-40
+      .header__intro.container 
+        .row 
+          .col-12.col-lg-6.header__intro__content
+            h1.header__intro__title БЫСТРЫЙ ПОШИВ ОПТОВЫХ ПАРТИЙ ПОД ЗАКАЗ
+            p.header__intro__p Производство изделий для вашего бренда, подбор тканей, изготовление спецодежды, шевронов, лейблов, знамен, сувенирной продукции любой сложности на современном оборудовании.
+            .header__intro__btns 
+              a(href="#!").header__intro__btn Заказать звонок
+              a(href="#!").header__intro__btn Подробнее
+      .header__location.container
+        svg(width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M12.9211 3.42441C11.7073 1.32973 9.55133 0.05 7.15387 0.00109375C7.05152 -0.00101562 6.94852 -0.00101562 6.84613 0.00109375C4.44871 0.05 2.29277 1.32973 1.07894 3.42441C-0.161758 5.5655 -0.195704 8.13738 0.988125 10.3042L5.94762 19.3818C5.94984 19.3858 5.95207 19.3899 5.95437 19.3939C6.17258 19.7731 6.56348 19.9995 7.00008 19.9995C7.43664 19.9995 7.82754 19.7731 8.0457 19.3939C8.04801 19.3899 8.05023 19.3858 8.05246 19.3818L13.012 10.3042C14.1957 8.13738 14.1618 5.5655 12.9211 3.42441ZM7 9.06202C5.44918 9.06202 4.1875 7.80035 4.1875 6.24953C4.1875 4.69871 5.44918 3.43703 7 3.43703C8.55082 3.43703 9.8125 4.69871 9.8125 6.24953C9.8125 7.80035 8.55086 9.06202 7 9.06202Z" fill="white")
+        p Доставка в любую страну СНГ.
+    main.main 
+      .items.container 
+        h1.items__title МЫ ПРЕДЛАГАЕМ
+        .item_left.row
+          .col-12.col-lg-6.item.item__imgs
+            img(src="images/item-1.webp", alt="gamma").item__img.wow.bounceInUp
+          .col-12.col-lg-6.item__texts.item.wow.bounceInRight
+            h1.item__title ПОШИВ ОДЕЖДЫ
+            p.item__p Пошив оптовых партий одежды на материалах заказчика, либо помошь в подборе материала. Упаковка, доставка, документов
+        .item_right.row
+          .col-12.col-lg-6.item__texts.item.wow.bounceInLeft
+            h1.item__title КОРПОРАТИВНЫЕ ЗАКАЗЫ
+            p.item__p Изготовление спецодежды, а также брентирование (нанесение логотипов заказчика методом машинной вышивки и печати на ткани).  
+          .col-12.col-lg-6.item.item__imgs
+            img(src="images/item-2.webp", alt="gamma").item__img.wow.bounceInUp
+        .item_left.row
+          .col-12.col-lg-6.item.item__imgs
+            img(src="images/item-3.webp", alt="gamma").item__img.wow.bounceInUp
+          .col-12.col-lg-6.item__texts.wow.bounceInRight
+            h1.item__title НАНЕСЕНИЕ ВЫШИВКИ И ПЕЧАТИ
+            p.item__p На готовых изделиях, а так же деталях кроя и материалах заказчика любой сложности.
+        .item_right.row
+          .col-12.col-lg-6.item__texts.item.wow.bounceInLeft
+            h1.item__title ПОШИВ НАШИВОК И ШЕВРОНОВ
+            p.item__p Можем выбрать технологию изготовления и изготовим по индивидуальному макету.   
+          .col-12.col-lg-6.item.item__imgs.mt-lg-30
+            img(src="images/item-4.webp", alt="gamma").item__img.wow.bounceInUp
+        .item_left.row
+          .col-12.col-lg-6.item.item__imgs
+            img(src="images/item-5.webp", alt="gamma").item__img.wow.bounceInUp
+          .col-12.col-lg-6.item__texts.item.wow.bounceInRight
+            h1.item__title ПОШИВ ФЛАГОВ И ЗНАМЕН
+            p.item__p Изготовление под ключ как из наших материалов, так и из материалов заказчика. Флаги и знамена выполняем по ГОСТ’у
+        .item_right.row
+          .col-12.col-lg-6.item__texts.item.wow.bounceInLeft
+            h1.item__title ИЗГОТОВЛЕНИЕ СУВЕНИРНОЙ ПРОДУКЦИИ
+            p.item__p Подушки, пледы, полотенца, маски для снаб салфетки, шоперы. Подберем цвет ткани, разместим логотипы и надписи.
+          .col-12.col-lg-6.item.item__imgs
+            img(src="images/item-6.webp", alt="gamma").item__img.wow.bounceInUp
+  
+    script(src="scripts/wow.min.js")
+    script(src="scripts/index.js") 
