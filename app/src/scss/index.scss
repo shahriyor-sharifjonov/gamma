@@ -319,6 +319,9 @@ body{
     @include media($lg){
       text-align: center;
     }
+    @include media($md){
+      font-size: 25px;
+    }
   }
 
   &__p{
@@ -329,6 +332,10 @@ body{
 
     @include media($lg){
       text-align: center;
+    }
+
+    @include media($md){
+      font-size: 16px;
     }
   }
 
@@ -358,5 +365,110 @@ body{
 .mt-lg-30{
   @include media($lg){
     margin-top: 30px;
+  }
+}
+
+.ad{
+  background: url(../images/adbg.webp) center / cover;
+
+  &__title__box{
+    padding-top: 25px;
+    display: flex;
+    margin-bottom: 12px;
+
+    img {
+      max-width: 200px;
+      width: 100%;
+
+      @include media($xl){
+        margin: 10px auto 15px;
+      }
+    }
+
+    @include media($xl){
+      flex-direction: column;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: #FFFFFF;
+    margin-left: 14px;
+
+    @include media($xl){
+      text-align: center;
+      margin-left: 0;
+    }
+    @include media($md){
+      font-size: 30px;
+    }
+  }
+
+  &__p{
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 135.9%;
+    color: #fff;
+    padding-bottom: 100px;
+
+    @include media($xl){
+      text-align: center;
+    }
+  }
+
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 120px;
+
+    &.row{
+      margin: 0;
+    }
+
+    > div{
+      display: flex;
+      justify-content: space-between;
+
+      @include media($md){
+        flex-direction: column;
+      }
+
+      &:nth-of-type(2){
+        @include media($xl){
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg{
+      margin-bottom: 12px;
+      max-width: 124px;
+      width: 100%;
+
+      @include media($xl){
+        margin-top: 35px;
+      }
+    }
+
+    &__p{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      color: #FFFFFF;
+      max-width: 170px;
+      width: 100%;
+    }
   }
 }
