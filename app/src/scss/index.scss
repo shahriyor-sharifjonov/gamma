@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Montserrat';
 }
@@ -372,7 +376,7 @@ body{
   background: url(../images/adbg.webp) center / cover;
 
   &__title__box{
-    padding-top: 25px;
+    padding-top: 65px;
     display: flex;
     margin-bottom: 12px;
 
@@ -470,5 +474,283 @@ body{
       max-width: 170px;
       width: 100%;
     }
+  }
+
+  &__clients{
+    padding-bottom: 50px;
+
+    &__title{
+      font-weight: 800;
+      font-size: 45px;
+      line-height: 55px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    & .row{
+
+      div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+
+        @include media($xl){
+          justify-content: center;
+        }
+        @include media($md){
+          flex-direction: column;
+        }
+
+        img{
+          max-width: 124px;
+          width: 100%;
+
+          @include media($xl){
+            margin: 25px 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.delivery{
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+
+    img{
+      margin-bottom: 15px;
+    }
+
+    p{
+      max-width: 232px;
+      text-align: center;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  &__p{
+    max-width: 845px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @include media($xl){
+      text-align: center;
+    }
+  }
+
+  &__btn{
+    padding: 12px 10px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 20px;
+    transition: 0.3s ease;
+
+    &:hover{
+      background: #ddd;
+      color: #333;
+    }
+  }
+
+  &__bottom__p{
+    text-align: end;
+
+    @include media($xl){
+      text-align: center;
+    }
+  }
+}
+
+.truck__img{
+  max-width: 100%;
+  width: 100%;
+}
+
+.contact{
+  background: #000;
+  color: #fff;
+  padding: 50px 0;
+
+  &__texts{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__item{
+    display: flex;
+    padding: 25px 0;
+
+    &__title{
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    &__p{
+      max-width: 300px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+
+      &_big{
+        max-width: 500px;
+        font-size: 18px;
+        color: #fff;
+        margin-top: 40px;
+      }
+    }
+
+    svg{
+      max-height: 50px;
+      margin-right: 15px;
+    }
+  }
+
+  &__input_small{
+    margin: 15px 0;
+    max-width: 500px;
+    width: 100%;
+    height: 70px;
+    font-family: 'Montserrat';
+    padding-top: 40px;
+    padding-left: 15px;
+    font-size: 20px;
+    border: none;
+    background: #fff;
+  }
+
+  &__input_large{
+    max-width: 500px;
+    width: 100%;
+    height: 200px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    border: none;
+    background: #fff;
+    margin-top: 15px;
+    padding-top: 160px;
+    padding-left: 15px;
+
+    @include media($md){
+      padding-top: 150px;
+    }
+  }
+
+  &__btn{
+    margin-top: 30px;
+    padding: 12px 10px;
+    background: #fff;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+
+    &:hover{
+      background: #333;
+      color: #fff;
+    }
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer{
+  background: #c4c4c4;
+  padding: 10px 0;
+
+  .row{
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+      display: flex;
+      flex-direction: column;
+
+      &:nth-of-type(1){
+        align-items: start;
+
+        p{
+          margin-top: 8px;
+          margin-bottom: 15px;
+        }
+
+        @include media($lg){
+          align-items: center;
+        }
+      }
+      &:nth-of-type(2){
+        align-items: center;
+        @include media($lg){
+          align-items: center;
+        }
+
+        a{
+          text-decoration: none;
+          color: #000;
+
+          div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            p{
+              font-weight: 700;
+            }
+
+
+            img{
+              max-width: 25px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      &:nth-of-type(3){
+        align-items: flex-end;
+        @include media($lg){
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.sayt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media($lg){
+    margin: 20px 0;
   }
 }
