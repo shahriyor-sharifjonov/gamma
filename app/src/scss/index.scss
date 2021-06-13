@@ -605,7 +605,7 @@ body{
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-    margin-top: 15px;
+    margin-top: 35px;
     font-size: 20px;
     transition: 0.3s ease;
 
@@ -669,7 +669,9 @@ body{
     }
 
     svg{
-      max-height: 50px;
+      max-height: 70px;
+      max-width: 50px;
+      width: 100%;
       margin-right: 15px;
     }
   }
