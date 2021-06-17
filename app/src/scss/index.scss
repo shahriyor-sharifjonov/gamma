@@ -806,3 +806,22 @@ body{
     margin: 20px 0;
   }
 }
+
+.item__img{
+  max-width: 90%;
+  width: 100%;
+}
+
+.items div:nth-child(3){
+  margin: -100px 0 -60px 0;
+
+  @include media($lg){
+    margin: 0;
+  }
+}
+
+.item__left div,
+.item__right div{
+  display: flex;
+  justify-content: center;
+}
