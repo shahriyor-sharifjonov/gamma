@@ -45,8 +45,46 @@ html(lang="en")
           path(d="M12.9211 3.42441C11.7073 1.32973 9.55133 0.05 7.15387 0.00109375C7.05152 -0.00101562 6.94852 -0.00101562 6.84613 0.00109375C4.44871 0.05 2.29277 1.32973 1.07894 3.42441C-0.161758 5.5655 -0.195704 8.13738 0.988125 10.3042L5.94762 19.3818C5.94984 19.3858 5.95207 19.3899 5.95437 19.3939C6.17258 19.7731 6.56348 19.9995 7.00008 19.9995C7.43664 19.9995 7.82754 19.7731 8.0457 19.3939C8.04801 19.3899 8.05023 19.3858 8.05246 19.3818L13.012 10.3042C14.1957 8.13738 14.1618 5.5655 12.9211 3.42441ZM7 9.06202C5.44918 9.06202 4.1875 7.80035 4.1875 6.24953C4.1875 4.69871 5.44918 3.43703 7 3.43703C8.55082 3.43703 9.8125 4.69871 9.8125 6.24953C9.8125 7.80035 8.55086 9.06202 7 9.06202Z" fill="white")
         p Доставка в любую страну СНГ.
     main.main 
-      .items.container#services 
-        h1.items__title МЫ ПРЕДЛАГАЕМ
+      .slider-container
+        h1.slider__title МЫ ПРЕДЛАГАЕМ
+        .slider.container
+          div(class="slider__item")
+            img(src="images/slide-1.webp", alt="gamma").slider-img
+            p.slider__text ПОШИВ ОДЕЖДЫ
+          div(class="slider__item")
+            img(src="images/slide-2.webp", alt="gamma").slider-img
+            p.slider__text КОРПОРАТИВНЫЕ ЗАКАЗЫ
+          div(class="slider__item")
+            img(src="images/slide-3.webp", alt="gamma").slider-img
+            p.slider__text НАНЕСЕНИЕ И ПЕЧАТЬ
+          div(class="slider__item")
+            img(src="images/slide-4.webp", alt="gamma").slider-img
+            p.slider__text ЭМБЛЕМЫ И ШЕВРОНЫ
+          div(class="slider__item")
+            img(src="images/slide-5.webp", alt="gamma").slider-img
+            p.slider__text ФЛАГИ И ЗАМЕНА
+          div(class="slider__item")
+            img(src="images/slide-6.webp", alt="gamma").slider-img
+            p.slider__text СУВЕНИРНАЯ ПРОДУКЦИЯ
+          div(class="slider__item")
+            img(src="images/slide-1.webp", alt="gamma").slider-img
+            p.slider__text ПОШИВ ОДЕЖДЫ
+          div(class="slider__item")
+            img(src="images/slide-2.webp", alt="gamma").slider-img
+            p.slider__text КОРПОРАТИВНЫЕ ЗАКАЗЫ
+          div(class="slider__item")
+            img(src="images/slide-3.webp", alt="gamma").slider-img
+            p.slider__text НАНЕСЕНИЕ И ПЕЧАТЬ
+          div(class="slider__item")
+            img(src="images/slide-4.webp", alt="gamma").slider-img
+            p.slider__text ЭМБЛЕМЫ И ШЕВРОНЫ
+          div(class="slider__item")
+            img(src="images/slide-5.webp", alt="gamma").slider-img
+            p.slider__text ФЛАГИ И ЗАМЕНА
+          div(class="slider__item")
+            img(src="images/slide-6.webp", alt="gamma").slider-img
+            p.slider__text СУВЕНИРНАЯ ПРОДУКЦИЯ
+      .items.container#services
         .item_left.row
           .col-12.col-lg-6.item.item__imgs
             img(src="images/item-1.webp", alt="gamma").item__img.wow.bounceInUp
@@ -207,7 +245,7 @@ html(lang="en")
                   a(href="tel:+375298989985").contact__item__p +375 29 89 89 985
                   a(href="mailto:info@gammadesign.com").contact__item__p info@gammadesign.com
                   p.contact__item__p_big Свяжитесь с нами или заполните форму обратной связи и мы обязательно Вам перезвоним. Если Вы планируете приехать к нам, пожалуйста, сообшите о визите заранее.
-            form.col-12.col-lg-6
+            form.col-12.col-lg-6.contact__form
               input(type="text" placeholder="Введите Ваше имя*").contact__input_small
               input(type="email" placeholder="Введите Ваше e-mail*").contact__input_small
               input(type="text" placeholder="Введите Ваше номер телефона с кодом*").contact__input_small
@@ -228,5 +266,7 @@ html(lang="en")
           div.col-12.col-lg-4 
             p ИП Ермилин В. А.
             p УНП 291 499 800
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="scripts/slick.min.js")
     script(src="scripts/wow.min.js")
     script(src="scripts/index.js")
