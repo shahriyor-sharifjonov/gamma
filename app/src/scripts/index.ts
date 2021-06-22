@@ -33,6 +33,7 @@ $(document).ready(function(){
     touchThreshold: 8,
     centerMode: true,
     centerPadding: '0px',
+    autoplay: true,
     responsive: [
       {
         breakpoint: 992,
